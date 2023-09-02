@@ -3,15 +3,23 @@ import Pizza from './Pizza';
 
 const Pedido = () => {
 
+   
+
     const [show, setShow] =useState(false);
+
 
     useEffect(()=>{
 
-      console.log("El componente fue actualizado");
+
+      
+
+  
 
         setTimeout(()=>{
 
             setShow(true)
+
+            console.log("Se actualizó el componente")
 
         }, 2000)
 
@@ -27,7 +35,7 @@ const Pedido = () => {
      
         <h2>Su pedido:</h2>
         {show && <Pizza/>}
-        <button onClick={() => setShow(false) & alert("El pedido fue cancelado") & console.log("El componente fue desmontado")}>Cancelar pedido</button>
+        <button onClick={() => setShow(false) & alert("El pedido fue cancelado") }>Cancelar pedido</button>
         
         
     </div>
@@ -37,3 +45,5 @@ const Pedido = () => {
 }
 
 export default Pedido
+
+
